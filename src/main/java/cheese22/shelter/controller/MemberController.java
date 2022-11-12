@@ -2,6 +2,7 @@ package cheese22.shelter.controller;
 
 import cheese22.shelter.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 
 public class MemberController {
     private final MemberService memberService;

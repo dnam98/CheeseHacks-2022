@@ -2,10 +2,12 @@ package cheese22.shelter.service;
 
 import cheese22.shelter.domain.Member;
 import cheese22.shelter.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
