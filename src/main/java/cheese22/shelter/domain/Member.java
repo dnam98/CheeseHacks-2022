@@ -1,6 +1,6 @@
 package cheese22.shelter.domain;
 
-public class User {
+public class Member {
     private String first_name;
     private String last_name;
     private String email;

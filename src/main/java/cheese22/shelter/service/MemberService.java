@@ -1,5 +1,5 @@
 package cheese22.shelter.service;
 
-public class UserService {
+public class MemberService {
 
 }
