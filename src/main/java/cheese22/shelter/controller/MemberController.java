@@ -24,7 +24,7 @@ public class MemberController {
     @PostMapping(value = "/members/new")
     public String create(MemberForm form) {
         Member member = new Member();
-        member.setEmail(form.getEmail());
+        member.setFirst_name(form.getFirst_name());
         memberService.join(member);
         return "members/qualifier";
     }

@@ -19,19 +19,19 @@ public class MemberService {
      * 회원가입
      */
     public Long join(Member member) {
-        validateDuplicateMember(member);  // 중복회원검증
+//        validateDuplicateMember(member);  // 중복회원검증
         memberRepository.save(member);
         return member.getId();
     }
 
-    private void validateDuplicateMember(Member member) {
-        memberRepository.findByEmail(member.getEmail())
-                .ifPresent(m -> {
-                    throw new IllegalStateException("Already existing member.");
-                });
-    }
+//    private void validateDuplicateMember(Member member) {
+//        memberRepository.findByfirst_name(member.getFirst_name())
+//                .ifPresent(m -> {
+//                    throw new IllegalStateException("Already existing member.");
+//                });
+//    }
 
-    public Optional<Member> findByEmail(String email) {
-        return memberRepository.findByEmail(email);
-    }
+//    public Optional<Member> findByEmail(String first_name) {
+//        return memberRepository.findByfirst_name(first_name);
+//    }
 }
