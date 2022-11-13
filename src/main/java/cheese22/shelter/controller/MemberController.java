@@ -25,6 +25,12 @@ public class MemberController {
     public String create(MemberForm form) {
         Member member = new Member();
         member.setFirst_name(form.getFirst_name());
+        member.setLast_name(form.getLast_name());
+       member.setEmail(form.getEmail());
+//       // member.setPhone(form.getPhone());
+// member.setPw(form.getPw());
+//        member.setEmail(form.getEmail());
+//        member.setLocation(form.getLocation());
         memberService.join(member);
         return "members/qualifier";
     }

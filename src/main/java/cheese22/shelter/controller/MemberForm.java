@@ -8,35 +8,35 @@ import javax.persistence.Id;
 public class MemberForm {
 
     private String first_name;
-//    private String last_name;
-//    private int phone;
+    private String last_name;
+////     private String phone;
     private Long id;
-//    private String email;
-//    private String pw;
-//    private String location;
+    private String email;
+//     private String pw;
+//      private String location;
+
 
 
 
     public String getFirst_name() {
         return first_name;
     }
-//
-//    public String getLast_name() {
-//        return last_name;
-//    }
-//
-//    public int getPhone() {
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+//    public String getPhone() {
 //        return phone;
 //    }
 
-    public Long getId() {
-        return id;
-    }
-
-//    public String getEmail() {
-//        return email;
-//    }
+  public Long getId() {
+       return id; }
 //
+    public String getEmail() {
+        return email;
+    }
+////
 //    public String getPw() {
 //        return pw;
 //    }
@@ -46,27 +46,27 @@ public class MemberForm {
 //    }
 
 
-
+//
     public void setFirst_name(String first_name) {
         this.first_name = first_name;
     }
-
-//    public void setLast_name(String last_name) {
-//        this.last_name = last_name;
-//    }
 //
-//    public void setPhone(int phone) {
-//        this.phone = phone;
-//    }
-
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+//
+////    public void setPhone(String phone) {
+////        this.phone = phone;
+////    }
+//
     public void setId(Long id) {
         this.id = id;
     }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
-//
+////
+    public void setEmail(String email) {
+        this.email = email;
+    }
+////
 //    public void setPw(String pw) {
 //        this.pw = pw;
 //    }
