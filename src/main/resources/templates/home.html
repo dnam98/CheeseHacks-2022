@@ -9,8 +9,8 @@
         * {
             box-sizing: border-box;
         }
-        body {font-family: Arial, Helvetica, sans-serif;margin: 0;
-            background: url("https://images.unsplash.com/photo-1525983360072-2ebda055ba40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60");
+        body {font-family: 'Open Sans', sans-serif;
+            background: url("https://img.freepik.com/free-vector/cute-pets-illustration_53876-112522.jpg?w=2000&t=st=1668321702~exp=1668322302~hmac=023b0fdff38b4bdc569ce43b39920cfaa97acb2ba934203430f52886df784822");
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -20,8 +20,8 @@
         .header {
             padding: 80px;
             text-align: center;
-            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-            color: white;
+
+            color: #e8854f;
         }
         .header h1 {
             font-size: 40px;
@@ -29,7 +29,7 @@
 
         button {
             background-color: rgba(0,0,0,0);
-            color: white;
+            color: #e8854f;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
@@ -37,7 +37,6 @@
             width: 10%;
             opacity: 0.9;
             font-size: 24px;
-
         }
 
         button:hover {
@@ -86,20 +85,22 @@
 <br>
 <br>
 <div class="clearfix">
-    <h1><button type="button" id="LogIn" class="loginbtn">Login</button>
+
+    <h1><a href="members/login"><button type="button" id="LogIn" class="loginbtn" ontransitionend="fade">Login</button></a>
         <script>
             document.getElementById("LogIn").onclick = function () {
                 location.href = "LogIn.html";
             }
         </script>
         <a href="members/new">
-        <button type="button" id="SignUp" class="signupbtn">Sign Up</button>
+            <button type="button" id="SignUp" class="signupbtn">Sign Up </button>
         </a>
-<!--        <script>-->
-<!--            document.getElementById("SignUp").onclick = function () {-->
-<!--                location.href = "/members/new";-->
-<!--            }-->
-<!--        </script>-->
+        <script>
+            document.getElementById("SignUp").onclick = function () {
+                location.href = "SignUp.html";
+
+            }
+        </script>
     </h1>
 </div>
 

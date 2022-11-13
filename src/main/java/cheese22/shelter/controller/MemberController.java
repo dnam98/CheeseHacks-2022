@@ -26,12 +26,26 @@ public class MemberController {
         Member member = new Member();
         member.setFirst_name(form.getFirst_name());
         member.setLast_name(form.getLast_name());
-       member.setEmail(form.getEmail());
-//       // member.setPhone(form.getPhone());
-// member.setPw(form.getPw());
-//        member.setEmail(form.getEmail());
-//        member.setLocation(form.getLocation());
+        member.setEmail(form.getEmail());
+        member.setPhone_number(form.getPhone_number());
+        member.setPw(form.getPw());
+        member.setLocation(form.getLocation());
         memberService.join(member);
         return "members/qualifier";
+    }
+
+    @GetMapping("/members/login")
+    public String login() {
+        return "members/LogIn";
+    }
+
+    @GetMapping("/loading")
+    public String loading() {
+        return "members/loading";
+    }
+
+    @GetMapping("members/friends")
+    public String friends() {
+        return "members/friends";
     }
 }
