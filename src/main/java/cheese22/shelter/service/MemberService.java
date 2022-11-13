@@ -18,20 +18,20 @@ public class MemberService {
     /**
      * 회원가입
      */
-    public String join(Member member) {
+    public Long join(Member member) {
         validateDuplicateMember(member);  // 중복회원검증
         memberRepository.save(member);
         return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
-        memberRepository.findById(member.getId())
+        memberRepository.findByEmail(member.getEmail())
                 .ifPresent(m -> {
                     throw new IllegalStateException("Already existing member.");
                 });
     }
 
-    public Optional<Member> findOne(String memberId) {
-        return memberRepository.findById(memberId);
+    public Optional<Member> findByEmail(String email) {
+        return memberRepository.findByEmail(email);
     }
 }

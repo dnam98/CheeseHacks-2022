@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface SpringDataJpaMemberRepository extends JpaRepository<Member, String>, MemberRepository {
     @Override
-    Optional<Member> findById(String memberId);
+    Optional<Member> findByEmail(String email);
 }

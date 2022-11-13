@@ -23,14 +23,14 @@ public class JpaMemberRepository implements MemberRepository{
     }
 
     @Override
-    public Optional<Member> findById(String id) {
-        Member member = em.find(Member.class, id);
+    public Optional<Member> findByEmail(String email) {
+        Member member = em.find(Member.class, email);
         return Optional.ofNullable(member);
     }
 
     @Override
     public List<Member> findAll() {
-        return em.createQuery("select m from USER_TABLE m", Member.class)
+        return em.createQuery("select m from user_table m", Member.class)
                 .getResultList();
     }
 }

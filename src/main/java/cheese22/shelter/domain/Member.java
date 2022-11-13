@@ -1,17 +1,18 @@
 package cheese22.shelter.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
 public class Member {
+
     private String first_name;
     private String last_name;
-    private String email;
+
+    @Column(name="phone_number")
     private int phone;
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
+    private String email;
     private String pw;
     private String location;
     private String status;
@@ -48,11 +49,11 @@ public class Member {
         this.phone = phone;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
