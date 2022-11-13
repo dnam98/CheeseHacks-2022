@@ -1,15 +1,97 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MainPage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {font-family: Arial, Helvetica, sans-serif;margin: 0;
+            background: url("../Images/jonas-vincent-xulIYVIbYIc-unsplash.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*Main Name*/
+
+        .header {
+            padding: 80px;
+            text-align: center;
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+            color: white;
+        }
+        .header h1 {
+            font-size: 40px;
+        }
+
+        button {
+            background-color: rgba(0,0,0,0);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+            opacity: 0.9;
+            font-size: 24px;
+
+        }
+
+        button:hover {
+            opacity:1;
+        }
+
+        /*login form*/
+        .loginbtn {
+            padding: 14px 20px;
+            background-color: rgba(0,0,0,0);
+            text-style: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }
+
+        /*Login location*/
+        .loginbtn, .signupbtn {
+
+            width: 100%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media screen and (max-width: 300px) {
+            .cancelbtn, .signupbtn {
+                width: 50%;
+            }
+        }
+
+    </style>
+</head>
+
 <body>
-<div class="container">
-    <div>
-        <h1>Hello Spring</h1>
-        <p>회원 기능</p>
-        <p>
-            <a href="/members/new">회원 가입</a>
-            <a href="/members">회원 목록</a>
-        </p>
-    </div>
-</div> <!-- /container -->
+
+<div class="header">
+    <h1>Get Abandoned Pet!</h1>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="clearfix">
+    <h1><button type="button" onclick="parent.location='LogIn.html'" class="loginbtn">Login</button>
+        <button type="submit" onclick="parent.location='SignUp.html'" class="signupbtn">Sign Up</button>
+    </h1>
+</div>
+
 </body>
+
 </html>
